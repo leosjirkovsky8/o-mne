@@ -22,5 +22,11 @@ S nabývajícími dovednostmi budu osobní stránku průběžně upravovat.
 - Základy Git a GitHub
 
 ## 📌 Poznámky
+Vývoj:
+1) založení nového repozitáře na Githubu, přidal jsem první verzi souboru readme s popisem, vytvořil jsem složku v notebooku, naklonoval jsem projekt do této složky, vytvořil jsem soubory HTML a CSS pro v HTML jsem udělal prvotní nastavení pro mou práci
+
+
+
+
 
 ---
