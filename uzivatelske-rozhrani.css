@@ -1,0 +1,96 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2 {
+  font-family: 'Roboto', sans-serif;
+}
+
+header {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.main-nav {
+  width: 100%; /* 100% šířky viewportu */
+  box-sizing: border-box; /* započítá padding do celkové šířky */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px 48px;
+  background-color: #b3b6b7;
+  border-bottom: 2px solid #ddd;
+}
+
+.nav-menu {
+  list-style-type: none; /* odstraní tečky*/
+  display: flex;
+  gap: 16px;
+  margin: 0;/* odstraní vých. formátování*/
+  padding: 0;/* odstraní vých. formátování*/
+ 
+
+}
+
+/* Styl odkazů jako tlačítek */
+.nav-menu a {
+  text-decoration: none;/* odstraní podtržení*/
+  background-color: #b3b6b7;/* stejná barva pozadí jako tlačítek*/
+  padding: 2px 16px;
+  border-radius: 10px;
+  color: white;
+  border: 1px solid transparent; /* připravíme prostor pro border */
+  transition: background-color 0.3s ease, border 0.3s ease; /* border musíme načasovat stejně */
+  
+}
+
+.nav-menu a:hover {
+  background-color: dimgray;
+  border: 1px solid whitesmoke; /* zvýrazní bílým rámečkem, styl: plná čára, 
+  barva: se dá psát hned za (jednodušší) */
+}
+
+
+@media (max-width: 1050px) { /* responzivita pro mobily apod.*/
+  .nav-menu {
+    flex-direction: column;/* pod sebou*/
+    align-items: center;/* doprostřed*/
+    gap: 12px; /* mez mezi odkazy*/
+    padding: 16px;/* vnitřní mezera celého navig. menu*/
+  }
+
+  .nav-menu li {
+    width: 100%; /* odkazy zaberou celou šířku rodiče - tedy prakticky celou šířku 
+    toho nejdělšího textu a budou tak všechny, když by tam toto nebylo, tak by to 
+    mělo šířku podle textu - výchozí, když by tam bylo méně jak 100%,
+    pak by box byl menší než text ( u toho nejdelšího textu, text by se zalomil na další řádek,
+     není totiž zakázané), pokud více např.
+    120% pak by to bylo o 20% větší než nejdelší text*/
+    max-width: 400px;
+  }
+
+  .nav-menu a {/* Udělá z odkazu (který je původně inline) 
+    prvek typu block, takže se může roztáhnout, 
+    bez toho by byla velikost jen tak velká, jak velký je text uvnitř, což je i horší opticky, tak 
+    pro klikání prstem*/
+    display: block;/* ...přesně bez toho by to nebylo na celém řádku roztažené...může se roztahovat */
+    text-align:center;/* text na střed */
+  }
+}
+
+.intro {
+  display: flex;
+  margin-top: 30px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  }
+
+  h1 section {/* pokud by to bylo obráceně, section h1, pak by celá h1 
+    měla italic a tenké písmo */
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
