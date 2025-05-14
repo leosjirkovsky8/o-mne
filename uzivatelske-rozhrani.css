@@ -38,7 +38,7 @@ header {
 .nav-menu a {
   text-decoration: none;/* odstraní podtržení*/
   background-color: #b3b6b7;/* stejná barva pozadí jako tlačítek*/
-  padding: 2px 16px;
+  padding: 5px 16px;
   border-radius: 10px;
   color: white;
   border: 1px solid transparent; /* připravíme prostor pro border */
@@ -57,8 +57,8 @@ header {
   .nav-menu {
     flex-direction: column;/* pod sebou*/
     align-items: center;/* doprostřed*/
-    gap: 12px; /* mez mezi odkazy*/
-    padding: 16px;/* vnitřní mezera celého navig. menu*/
+    gap: 8px; /* mez mezi odkazy*/
+    padding: 4px;/* vnitřní mezera celého navig. menu*/
   }
 
   .nav-menu li {
@@ -93,4 +93,8 @@ header {
   font-family: 'Open Sans', sans-serif;
   font-weight: 100;
   font-style: italic;
+  padding-left: 55px;
+  padding-right: 55px;
+  padding-top: 30px;
+  margin-bottom: 40px;
 }
