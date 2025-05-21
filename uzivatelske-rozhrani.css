@@ -52,6 +52,31 @@ header {
   barva: se dá psát hned za (jednodušší) */
 }
 
+.intro {
+  display: flex;
+  margin-top: 30px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.intro-text {
+  flex-direction: column;
+  margin-top: -30px; /* posuneme trochu nahoru */
+  margin-left: 40px;
+}
+
+  p {/* pokud by to bylo obráceně, section h1, pak by celá h1 
+    měla italic a tenké písmo */
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 100;
+  font-size: x-large;
+  font-style: italic;
+  padding-left: 55px;
+  padding-right: 55px;
+  padding-top: 55px;
+  margin-bottom: 40px;
+}
 
 @media (max-width: 1050px) { /* responzivita pro mobily apod.*/
   .nav-menu {
@@ -78,57 +103,21 @@ header {
     display: block;/* ...přesně bez toho by to nebylo na celém řádku roztažené...může se roztahovat */
     text-align:center;/* text na střed */
   }
-img {/* „Obrázek se nikdy neroztáhne přes šířku rodičovského prvku“ – 
-  takže nebude nikdy větší než obrazovka. */
-  max-width: 100%;
-  height: auto;
-}
 
 .intro {/* wrap umožní, aby se text a fotka na mobilu zalamovaly pod sebe,
    místo aby se tlačily vedle sebe. Pokud tam nebude ten wrap, pak je jedno, že u obrázku je max. šířka rodiče,
-   totiž pořád se to dá vedle sebe a rozboří ten paramter..., ten wrap tam musí být, pokud tam naopak bude
-   wrap a nebude tam "vlastnost" toho obrázku, pak bude prostě fotka o trochu větší než menu nahoře a bude možné to 
-   malinko posunout doprava-obrázek je širší než to menu nahře
-  display: flex;
-  flex-wrap: wrap;, ale já to změním na column a pak zadám pořadí*/
-    flex-direction: column; /* pod sebou */
-}
-  .intro h1 {
-    order: 1;
+   totiž pořád se to dá vedle sebe a rozboří rozložení..., ten wrap tam musí být, pokud tam naopak bude
+   wrap a nebude tam "vlastnost" toho obrázku - 100%..., pak bude prostě fotka o trochu větší než menu nahoře a bude možné to 
+   malinko posunout doprava-obrázek je širší než to menu nahře*/  
+  flex-wrap: wrap;
+  
   }
-
-  .intro img {
-    order: 2;
+ .intro-text {
+    margin-left: 0px;
+    margin-top: 0px;
   }
-
-  .intro p {
-    order: 3;
+.profile-photo {
+    max-width: 100%;
   }
-
-
-}
-
-.intro {
-  display: flex;
-  margin-top: 30px;
-  align-items: center;
-  text-align: center;
-  justify-content: center;
-}
-
-.intro-text {
-  flex-direction: column;
-}
-
-  p {/* pokud by to bylo obráceně, section h1, pak by celá h1 
-    měla italic a tenké písmo */
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 100;
-  font-size: x-large;
-  font-style: italic;
-  padding-left: 55px;
-  padding-right: 55px;
-  padding-top: 55px;
-  margin-bottom: 40px;
 }
 
