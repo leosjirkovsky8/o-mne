@@ -116,6 +116,10 @@ img {/* „Obrázek se nikdy neroztáhne přes šířku rodičovského prvku“ 
   justify-content: center;
 }
 
+.intro-text {
+  flex-direction: column;
+}
+
   p {/* pokud by to bylo obráceně, section h1, pak by celá h1 
     měla italic a tenké písmo */
   font-family: 'Open Sans', sans-serif;
