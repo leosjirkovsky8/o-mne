@@ -66,7 +66,7 @@ header {
   margin-left: 40px;
 }
 
-  p {/* pokud by to bylo obráceně, section h1, pak by celá h1 
+  .intro-text p {/* pokud by to bylo obráceně, section h1, pak by celá h1 
     měla italic a tenké písmo */
   font-family: 'Open Sans', sans-serif;
   font-weight: 100;
@@ -77,6 +77,76 @@ header {
   padding-top: 55px;
   margin-bottom: 40px;
 }
+
+.programming {/* */
+  font-family: 'Open Sans', sans-serif;
+  text-align: justify;
+  font-weight: 100;
+  font-size: large;
+  padding: 55px;
+  background-color:bisque;
+  margin: 0px;
+}
+
+.formal-experience {/* */
+  font-family: 'Open Sans', sans-serif;
+  text-align: justify;
+  font-weight: 100;
+  font-size: large;
+  padding: 55px;
+  margin: 0px;
+}
+
+.add1 {/* */
+ font-family: 'Open Sans', sans-serif;
+  text-align: justify;
+  font-weight: 100;
+  font-size: large;
+  padding: 55px;
+  background-color:bisque; /*půvdně aliceblue */
+  margin: 0px;
+}
+
+.informal-experience {/* */
+  font-family: 'Open Sans', sans-serif;
+  text-align: justify;
+  font-weight: 100;
+  font-size: large;
+  padding: 55px;
+  margin: 0px;
+}
+
+.add2 {/* */
+ font-family: 'Open Sans', sans-serif;
+  text-align: justify;
+  font-weight: 100;
+  font-size: large;
+  padding: 55px;
+  background-color:bisque; /*půvdně aliceblue */
+  margin: 0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media (max-width: 1050px) { /* responzivita pro mobily apod.*/
   .nav-menu {
@@ -110,7 +180,6 @@ header {
    wrap a nebude tam "vlastnost" toho obrázku - 100%..., pak bude prostě fotka o trochu větší než menu nahoře a bude možné to 
    malinko posunout doprava-obrázek je širší než to menu nahře*/  
   flex-wrap: wrap;
-  
   }
  .intro-text {
     margin-left: 0px;
