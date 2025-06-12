@@ -13,6 +13,10 @@ header {
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior:smooth;/* auto je moc rychlé */
+}
+
 .main-nav {
   width: 100%; /* 100% šířky viewportu */
   box-sizing: border-box; /* započítá padding do celkové šířky */
@@ -190,7 +194,29 @@ ul {
 
 }
 
+.contact {/* */
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 100;
+  font-size: large;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh; /* výška celé obrazovky */
+  padding: 100px 20px; /* prostor okolo obsahu */
+  text-align: center;
+}
 
+.contact ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.contact li {
+  padding: 10px;
+}
 
 
 
@@ -222,20 +248,22 @@ ul {
     max-width: 400px;
   }
 
-  .nav-menu a {/* Udělá z odkazu (který je původně inline) 
+  /* Udělá z odkazu (který je původně inline) 
     prvek typu block, takže se může roztáhnout, 
     bez toho by byla velikost jen tak velká, jak velký je text uvnitř, což je i horší opticky, tak 
-    pro klikání prstem*/
+    pro klikání prstem */
+  .nav-menu a {
     display: block;/* ...přesně bez toho by to nebylo na celém řádku roztažené...může se roztahovat */
     text-align:center;/* text na střed */
   }
 
-.intro {/* wrap umožní, aby se text a fotka na mobilu zalamovaly pod sebe,
+
+.intro {  
+  flex-wrap: wrap;   /* wrap umožní, aby se text a fotka na mobilu zalamovaly pod sebe,
    místo aby se tlačily vedle sebe. Pokud tam nebude ten wrap, pak je jedno, že u obrázku je max. šířka rodiče,
    totiž pořád se to dá vedle sebe a rozboří rozložení..., ten wrap tam musí být, pokud tam naopak bude
    wrap a nebude tam "vlastnost" toho obrázku - 100%..., pak bude prostě fotka o trochu větší než menu nahoře a bude možné to 
-   malinko posunout doprava-obrázek je širší než to menu nahře*/  
-  flex-wrap: wrap;
+   malinko posunout doprava-obrázek je širší než to menu nahře*/
   }
  .intro-text {
     margin-left: 0px;
@@ -244,6 +272,26 @@ ul {
 .profile-photo {
     max-width: 100%;
   }
+ 
+   /* OBSAHOVÉ SEKCE – menší odsazení z boků */
+  .programming,
+  .formal-experience,
+  .add1,
+  .informal-experience,
+  .add2,
+  .education,
+  .add3 {
+    padding: 24px 16px;     /* místo 55px */
+  }
+
+  /* CITÁT v úvodu */
+  .intro-text p {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+
+
   .extra {
     padding: 20px 0px;
     margin: 5px

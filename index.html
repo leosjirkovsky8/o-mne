@@ -1,230 +1,294 @@
-<!DOCTYPE html><!--To říká prohlížeči, že jde o HTML5 dokument -->
-<html lang="cs"><!--změněno z "en" na "cs" protože text obsahu bude pro uživatele v češtině, je důležité pro: 
-•	přístupnost (např. čtečky obrazovky)
-•	SEO (vyhledávače poznají jazyk)
-•	správné zobrazení znaků  -->
-<head>
-    <meta charset="UTF-8"><!--Zajišťuje, že znaky (včetně českých písmen) budou správně zobrazeny.-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--Zajišťuje responzivitu na mobilních zařízeních.-->
-    <meta name="description" content="Osobní reprezentativní stránka Leoše Jirkovského"><!--toto uživatel také nevidí, slouží pro lepší SEO, vyhledávač-->
-    <link rel="stylesheet" href="uzivatelske-rozhrani.css"> <!--toto je odkaz na stylování stránky, umístěno do head-->
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"><!-- Google Font – Roboto i Open Sans, velmi dobře podporované -->
-    <!--Font(y) bude(ou) načten(y) z webu Google fonts, následně bude v CSS souboru upřesněno jestli tento font použiju na celý dokument nebo jen části apod.-->
-    <!--udělal jsem si i Favicon, přesunul do kořenové složky, ale nelíbí se mi, takže nebudu používat:
-    <link rel="icon" href="favicon.ico" type="image/x-icon">-->
-    <!--podařilo se mi to, že zmiňovaný favicon nešel odstranit za žádnou cenu z prohlížeče Chrome - i přes 
-    odstarnění všech odkazů apod., ani opětovným restartováním 
-    visual studia, prohlížeče, vymazáním cachce, deaktivováním cache, takže nakonec jsem musel použít:
-    <link rel="icon" href="data:;base64,iVBORw0KGgo="> =což je odkaz na prázdný cache(v jiných prohlížežích 
-    problém nebyl)-->
-    <!--kromě Faviconu, bych sem mohl přidat pro lepší SEO Open Graph pro sdílení na sociálních sítích, 
-    také by se sem daly přidat Klíčová slova (málo důležité, ale neškodí)-->
-    <title>Leoš Jirkovský</title><!--co uživatel uvidí "nahoře" v záložce-->
-    
-</head>
-<body>
+<!DOCTYPE html><!-- HTML5 dokument -->
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Osobní reprezentativní stránka Leoše Jirkovského"
+    />
 
-  <header class="main-nav"><!--<header> je sémantický HTML prvek, který říká prohlížeči a vyhledávačům: „Toto je hlavní navigace stránky.“-->
-    <nav><!--<nav> je sémantický HTML prvek, který říká prohlížeči a vyhledávačům: „Toto je hlavní navigace stránky.“-->
-        <ul class="nav-menu"><!--moderní způsob stylování navigace /semantických tagů, žádné používání "div"-->
-          <li><a href="#intro">O mně</a></li>
+    <!-- Styly a Google Fonts -->
+    <link rel="stylesheet" href="uzivatelske-rozhrani.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Leoš Jirkovský</title>
+  </head>
+
+  <body>
+    <!-- Navigace -->
+    <header class="main-nav">
+      <nav>
+        <ul class="nav-menu">
           <li><a href="#experience">Pracovní zkušenosti</a></li>
-          <li><a href="#nonwork">Další zkušenosti</a></li>
-          <li><a href="#skills">Schopnosti a dovednosti</a></li>
-          <li><a href="#achievements">Ocenění</a></li>
+          <li><a href="#nonwork">Pracovní&nbsp;zkušenosti&nbsp;neformální</a></li>
+          <li><a href="#education">Vzdělání</a></li>
+          <li><a href="#skills">Schopnosti a&nbsp;dovednosti</a></li>
           <li><a href="#contact">Kontakt</a></li>
         </ul>
       </nav>
-      </header>
+    </header>
 
 
-    <div class="intro">
+    <!-- Úvod -->
+    <div class="intro" id="intro">
       <div class="intro-text">
         <h1>Leoš Jirkovský</h1>
-        <p>Neobyčejná a proměnlivá doba si žádá lidi s komplexními znalostmi, kteří dokážou navigovat napříč rozbouřenými vodami a zároveň být spolehlivým opěrným bodem firmy.
-          Nejsem jen programátor. Jsem partner, který přináší nadhled, stabilitu a schopnost adaptace.</p>
+        <p>
+          Neobyčejná a proměnlivá doba si žádá lidi s komplexními znalostmi,
+          kteří dokážou navigovat napříč rozbouřenými vodami a zároveň být
+          spolehlivým opěrným bodem firmy. Nejsem jen programátor. Jsem partner,
+          který přináší nadhled, stabilitu a schopnost adaptace.
+        </p>
       </div>
-      <img src="úvodní-fotka.jpeg" alt="Leoš Jirkovský - Web Developer" class="profile-photo"> <!--úvodní fotka je source - zdroj, odkud bereme fotku, měla by být 
-      ve stejné složce jako HTML soubor, dále Leoš Jirkovský je popis obrázku, pokud by se nenačetl, zároveň slouží
-      pro SEO, a třída je pro úpravy v CSS -->
+      <img
+        src="úvodní-fotka.jpeg"
+        alt="Leoš Jirkovský - Web Developer"
+        class="profile-photo"
+      />
     </div>
 
+    <!-- Krátký odstavec o IT cestě -->
     <p class="programming">
-        Od 5. dubna 2025 jsem se vydal na cestu do světa IT.
-        Začal jsem kurzem Foundations (HTML, CSS, Flexbox) na platformě The Odin Project, kde jsem se postupně 
-        od malých úkolů propracoval až k tvorbě této osobní webové stránky, která demonstruje moje dovednosti v IT a zároveň 
-        zde uvádím i infomace, které v životopise neuvádím. Dne 13. května jsem nastoupil do akademie Engeto, kde studuji jazyk 
-        Python. Rád bych proniknul i do světa backendu a naučil se tím tvořit kompexní projekty. 
-        Mým cílem je pracovat v seriózní firmě se skvělým kolektivem na full-remote a ideálně využít mé další znalosti.
+      Od 5.&nbsp;dubna&nbsp;2025 jsem se vydal na cestu do světa IT. Začal jsem
+      kurzem Foundations (HTML, CSS, Flexbox) na platformě The Odin Project,
+      kde jsem se postupně propracoval až k tvorbě této osobní webové stránky.
+      Nyní studuji JavaScript a&nbsp;jazyk Python v&nbsp;akademii Engeto. Rád
+      bych k frontendu přidal i&nbsp;backend a vytvářel tak komplexní projekty.
     </p>
 
-    <section class="formal-experience">
-    <h2>Pracovní zkušenosti</h2>
-  <section class="highlight">
-  <h3>IT projekty | duben 2025 - současnost</h3>
-  <ul>
-  <li>Tvorba osobní prezenční stránky, na které se právě nacházíte</li>
-  </ul>
-  </section>
-  <h3> Osobní rozvoj a mezinárodní zkušenosti | září 2024 – květen 2025</h3>
-  <ul>
-  <li>Absolvoval jsem distanční studium zakončené diplomem v oblasti zákaznické zkušenosti, kde jsem si osvojil znalosti v mapování zákaznické cesty a zásadách špičkového servisu
-  </li>
-  <li>Provedl jsem vlastní průzkum trhu v Salvadoru a Brazílii a identifikoval lokální podnikatelské příležitosti
-  </li>
-  <li>Navázal jsem mezinárodní kontakty a vypracoval finanční plán pro otveření pobočky české IT firmy v Salavdoru
-  </li>
-  <li>Pro českou strojírenskou firmu jsem organizoval akvizici českého zbrojního podniku, připravoval strategii rozvoje a proniknutí na zahraniční trhy
-  </li>
-  <li>Na začátku roku jsem měl rozhovor pro týdeník Ekonom o podnikatelských příležitostech v Salvadoru
-  </li>
-  <li>Dosáhl jsem základní úrovně španělštiny a portugalštiny díky cestování a strukturovaným online kurzům
-  </li>
-</ul>
+    <!-- Formální zkušenosti -->
+    <section class="formal-experience" id="experience">
+      <h2>Pracovní zkušenosti</h2>
 
+      <section class="highlight">
+        <h3>IT projekty | duben&nbsp;2025 – současnost</h3>
+        <ul>
+          <li>Tvorba osobní prezentační stránky, na které se právě nacházíte</li>
+        </ul>
+      </section>
 
-<h3>Ochranná služba | Policie ČR | listopad 2020 – srpen 2024</h3>
-<ul>
-  <li>Realizoval jsem ochranné operace samostatně a v týmu se zaměřením na bezpečnost chráněných osob a objektů
-  </li>
-  <li>Poskytoval jsem odbornou podporu vedení útvaru na celostátní úrovni
-  </li>
-  <li>Zajišťoval jsem přísnou důvěrnost při správě a archivaci citlivých dokumentů spojených s činností bezpečnostních složek
-</li>
-<li>Poznal jsem jak funguje Úřad vlády ČR a měl jsem příležitost seznámit se s osobnostmi české a zahraniční politiky
-</li>
-<li>Mám přímou zkušenost se zajišťováním bezpečnosti Policií ČR od místních záležitostí po mezinárodní záležitosti
-</li>
-</ul>
+      <h3>Osobní rozvoj a mezinárodní zkušenosti | září&nbsp;2024 – dosud</h3>
+      <ul>
+        <li>
+          Distanční studium Customer Experience zakončené diplomem, včetně
+          mapování zákaznické cesty a zásad špičkového servisu
+        </li>
+        <li>
+          Vlastní průzkum trhu v Salvadoru a Brazílii, identifikace lokálních
+          podnikatelských příležitostí
+        </li>
+        <li>
+          Vypracování finančního plánu pro otevření pobočky české IT firmy
+          v&nbsp;Salvadoru
+        </li>
+        <li>
+          Organizace akvizice českého zbrojního podniku pro strojírenskou firmu
+          a strategie pro vstup na zahraniční trhy
+        </li>
+        <li>
+          Rozhovor pro týdeník <em>Ekonom</em> o podnikatelských příležitostech
+          v Salvadoru
+        </li>
+        <li>
+          Základní znalost španělštiny a portugalštiny díky cestování a online
+          kurzům
+        </li>
+      </ul>
+
+      <h3>Ochranná služba | Policie&nbsp;ČR | listopad&nbsp;2020 – srpen&nbsp;2024</h3>
+      <ul>
+        <li>
+          Ochranné operace samostatně i v týmu – bezpečnost chráněných osob
+          a objektů
+        </li>
+        <li>Odborná podpora vedení útvaru na celostátní úrovni</li>
+        <li>
+          Správa citlivé dokumentace v režimu přísné důvěrnosti
+        </li>
+        <li>
+          Spolupráce s Úřadem vlády ČR a osobnostmi české i mezinárodní politiky
+        </li>
+        <li>
+          Zkušenosti s bezpečnostními operacemi v tuzemsku i zahraničí
+        </li>
+      </ul>
     </section>
+
     <p class="add1">
-      Začal jsem pracovat již při vysoké škole a za tu dobu jsem si vyzkoušel mnoho různých prací, např. jaké to 
-      je učit angličtinu na základní škole, jaké to je pracovat v bance, jaké to je pracovat se dřevem na střechách domů, prošel jsem 
-      základním 3 měsíčním vojenským výcvikem a také pracoval na obchodním oddělení mlékárny.
-    </p>
-    <section class="informal-experience">
-  <h2>Pracovní zkušenosti neformální</h2>
-  <h3>Mezinárodní obchodní zkušenosti</h3>
-  <ul>
-<li>Měl jsem možnost spolupracovat se svým otcem, specialistou na africké a zámořské trhy, na pomoci českým firmám při vstupu na nové trhy</li>
-<li>Účastnil jsem se obchodních cest do několika zemí, kde jsem podporoval B2B a B2G jednání a pomáhal firmám identifikovat příležitosti pro růst v zahraničí</li>
-<li>Získal jsem praktické zkušenosti s komunikací, vyjednáváním a vedením jednání na vysoké úrovni jak s podnikateli, tak se zástupci cizích vlád</li>
-  </ul>
-<h3>Jazyková platforma Latudio</h3>
-  <ul>
-<li>Měl jsem možnost spolupracovat s Markem Shimadou, bývalým manažerem společnosti Boeing na mezinárodní jazykové vzdělávací platformě</li>
-<li>Panu Shimadovi jsem pomáhal na zformulování podniaktelského nápadu a strategiích uplatnitelných v České republice a mezinárodním prostředí</li>
-<li>Podílel jsem se na vývoji obsahu, překladech a vylepšování platformy.</li>
-<li>Cennou zkušeností bylo účastnit se rozvoje podnikatelské nápadu a jeho přetavení v reálný produkt v rámci mezinárodního týmu čítajícího několik desítek lidí</li>
-  </ul> 
-</section>
-<p class="add2">
-      Za svůj relativně krátký život jsem stihnul navštívit soukromě i služebně přes 60 států světa, 
-      navázat hodnotné kontakty a porozumět jiným kulturám. Zažil jsem dobré i špatné podnikatele, 
-      viděl jsem podniky rozkvétat, ale i se hroutit. Vím, jaké vlastnosti odlišují úspěšné podnikatele 
-      od těch méně úspěšných a umím načrtnout takové strategie, díky kterým se odlišíte od konkurence a zvítězíte.
-    </p>
- <section class="education">
-  <h2>Vzdělání</h2>
-
-  <section class="highlight">
-<h3>IT vzdělání, 2025</h3>
-<ul>
-<li>Samostudium Frontendu - HTML, CSS, Flexbox na portálu Naucme.it v rámci "TheOdinProject", Studium jazyka Ptyhon v Engeto akademii</li>
-  </ul>
-</section>
-
-<h3>CX Academy, 2024 - 2025</h3>
-<ul>
-<li>Dálkové studium zákaznikcé zkušenosti na přední světové akademii v Irsku zaměřené na zákaznickou zkušenost</li>
-<li>Součástí studia byl také praktický výzkum zaměřený na zákaznickou zkušenost na Letišti Václava Havla v Praze</li>
-<li>Plánování, implementace a měření aktivit v oblasti zákaznické zkušenosti pomocí metrik jako NPS, CSAT a CES, mapování zákaznické cesty a rozvoj zákaznicky orientované firemní kultury</li>
-<li>Studium jsem zakončil diplomem s vyznamenáním</li>
-</ul>
-  <h3>Coursera, základy zákaznického servisu, 2023 - 2024</h3>
-  <ul>
-<li>Online studium zaměřené především na psychologické aspekty interakce se zákazníkem.</li>
-<li>Panu Shimadovi jsem pomáhal na zformulování podniaktelského nápadu a strategiích uplatnitelných v České republice a mezinárodním prostředí</li>
-   </ul>  
-<h3>Koučovací Akademie Coachville, Praha, 2019 - 2020</h3>
-<ul>
-<li>Praktický 9-ti měsíční vzdělávací program v životním koučovaní, zahrnující práci, život, podnikání, vztahy apod.</li>
-<li>Unikátní metoda Život jako Hra, dosažení profesionálních koučovacích dovedností</li> 
-<li>Součástí studia byla i praxe v koučování a minimum 200 odkoučovaných hodin</li> 
-</ul>
-<h3>Policejní akademie ČR v Praze, 2011 - 2018</h3>
-<ul>
-<li>Získání magisterského titulu v oboru krizový management</li>
-<li>Studium se týkalo identifikace a řízení rizik a zvládání krizí způsobených činností člověka, přírodními živly a haváriemi</li> 
-<li>V rámci studia jsem se zapojil i do nepovinných aktivit a například získal zvláštní ocenění rektora Policejní akademie ve studijní vědecké a výzkumné činnosti</li> 
-<li>Na akademické půdě jsem také vystoupil jako řečník na mezinárodní konferenci v rámci vzdělávání ozborjených složek</li>
-<li>Studium na Vyšší policejní škole ve Ščitně v Polsku v rámci studijní programu Erasmus+, studium policejních a krizových činností v anglickém jazyce</li>
-</li>
-</ul>
-<h3>Jazyková škola hlavního města Prahy, 2010 - 2011</h3>
-<ul>
-<li>Denní studium anglického jazyka, které jsem zakončil všeobecnou státní jazykovou zkoušku na úrovni C1</li>
-</ul>
-<h3>Gymnázium Písnická Praha 4, 2006 - 2010</h3>
-<ul>
-<li>Všeobecně zaměřené gymnázium, které jsem zakončil maturitou</li> 
-</ul>
-</section>
-<p class="add3">
-     Při pohledu na mé vzdělání je patrné, že „business“ v mém životě hrál významnou roli,
-      a proto jsem věnoval velkou pozornost souvisejícímu vzdělání a odbornosti. Rozsáhlé výzvy a neustálé 
-      studium demonstrují mou schopnost se neustále rozvíjet, 
-      hluboce se soustředit a přizpůsobovat se proměnlivým podmínkám. 
-     Věřím, že dlouhodobé učení není jen cestou k odbornosti, ale i projevem odpovědnosti, 
-     disciplíny a strategického myšlení – vlastností, které přenáším do každého profesního prostředí.
+      Již při studiu vysoké školy jsem vyzkoušel řadu různých prací – od výuky
+      angličtiny na základní škole, přes práci v bance, až po základní tříměsíční
+      vojenský výcvik či obchodní oddělení mlékárny.
     </p>
 
-<section class="extra">
-  <div class="extra-extra">
-    <h3>Silné stránky</h3>
-    <ul>
-      <li>Kombinace měkkých a tvrdých dovedností</li>
-      <li>Multitasking a organizace</li>
-      <li>Silné mezilidské a komunikační dovednosti</li>
-      <li>Adaptabilita a loajalita</li>
-    </ul>
-  </div>
+    <!-- Neformální zkušenosti -->
+    <section class="informal-experience" id="nonwork">
+      <h2>Pracovní zkušenosti neformální</h2>
 
-  <div class="extra-extra">
-    <h3>Jazyky</h3>
-    <ul>
-      <li>Angličtina – C1 (plynulá)</li>
-      <li>Němčina – A1/A2 (základy, aktivně se zlepšuji)</li>
-      <li>Brazilská Portugalština – A1/A2 (základy, aktivně se zlepšuji)</li>
-      <li>Ruský jazky - A2/B1</li>
-    </ul>
-  </div>
+      <h3>Mezinárodní obchodní zkušenosti</h3>
+      <ul>
+        <li>
+          Spolupráce s otcem – specialistou na africké a zámořské trhy –
+          při pomoci českým firmám vstupovat na nové trhy
+        </li>
+        <li>
+          Účast na obchodních cestách, podpora B2B a B2G jednání v několika
+          zemích
+        </li>
+        <li>
+          Praxe s mezikulturním vyjednáváním na úrovni podnikatelů i vlád
+        </li>
+      </ul>
 
-  <div class="extra-extra">
-    <h3>Nástroje a Software</h3>
-    <ul>
-      <li>Aktuálně rozšiřuji IT dovednosti</li>
-      <li>MS Office (Excel, Word, PowerPoint), Google Workspace, Zoom, MS Teams</li>
-      <li>HTML, CSS, JavaScript, Python, Git, Github</li>
-    </ul>
-  </div>
+      <h3>Jazyková platforma Latudio</h3>
+      <ul>
+        <li>
+          Spolupráce s Markem Shimadou, bývalým manažerem společnosti Boeing,
+          na mezinárodní platformě
+        </li>
+        <li>
+          Pomoc s formulací podnikatelského záměru a strategií pro český
+          i globální trh
+        </li>
+        <li>Participace na vývoji obsahu, překladech a optimalizaci</li>
+        <li>
+          Zkušenost s proměnou nápadu v reálný produkt v mezinárodním týmu
+        </li>
+      </ul>
 
-<div class="extra-extra">
-    <h3>Odbornost</h3>
-    <ul>
-      <li>Řízení projektů</li>
-      <li>Mezinárodní obchod</li>
-      <li>Inovace a strategie růstu</li>
-      <li>Koučink a rozvoj lidí</li>
-      <li>Psychologie klienta a zákaznická zkušenost</li>
-    </ul>
-  </div>
+       <h3>Investorské zkušenosti</h3>
+      <ul>
+        <li>
+          Během pandemie Covid-19 jsem začal investovat, 
+          během tohoto proměnlivého období jsem začal investovat s vlastními a půjčenými fin. prostředky
+        </li>
+        <li>
+          Během prvního účetního období jsem dosáhnul zhodnocení okolo 8%. Během druhého účetního období jsem doáhnul zhodnocení okolo 50%
+        </li>
+        <li>Prostřednictvím různých médií pravidelně sleduji trhy, geopolitiku i ekonomiky velkých států</li>
+        <li>
+          Zkušenosti v analytice, makro i mikro ekonomice, zkušenosti s invest. platformami, bankovními insitucemi 
+        </li>
+      </ul>
+    </section>
 
-</section>
+    <p class="add2">
+      Navštívil jsem více než 60 států světa, navázal kontakty a poznal odlišné
+      kultury. Viděl jsem firmy růst i krachovat a vím, jaké vlastnosti vedou
+      k úspěchu. Tyto zkušenosti přenáším do strategických doporučení.
+    </p>
 
+    <!-- Vzdělání -->
+    <section class="education" id="education">
+      <h2>Vzdělání</h2>
 
+      <section class="highlight">
+        <h3>IT vzdělání, 2025</h3>
+        <ul>
+          <li>
+            Samostudium frontendu (HTML, CSS, Flexbox) – The Odin Project;
+            aktuálně JavaScript a Python v akademii Engeto
+          </li>
+        </ul>
+      </section>
 
+      <h3>CX Academy, 2024 – 2025</h3>
+      <ul>
+        <li>
+          Dálkové studium zákaznické zkušenosti na irské CX Academy
+          (diplom s vyznamenáním)
+        </li>
+        <li>
+          Praktický výzkum zákaznické cesty na Letišti Václava Havla
+        </li>
+      </ul>
 
+      <h3>Coursera – základy zákaznického servisu, 2023 – 2024</h3>
+      <ul>
+        <li>Online kurz zaměřený na psychologii interakce se zákazníkem</li>
+      </ul>
 
-</body>
+      <h3>Coachville Life Coaching Academy, 2019 – 2020</h3>
+      <ul>
+        <li>Devítiměsíční program life coachingu, včetně 200 hodin praxe</li>
+      </ul>
+
+      <h3>Policejní akademie ČR, 2011 – 2018</h3>
+      <ul>
+        <li>Mgr. v oboru krizový management, ocenění rektora PA ČR</li>
+        <li>Vystoupení na mezinárodní konferenci ozbrojených složek</li>
+        <li>Erasmus+ na Policejní škole ve Ščitně (Polsko)</li>
+      </ul>
+
+      <h3>Jazyková škola hl. m. Prahy, 2010 – 2011</h3>
+      <ul>
+        <li>Státní jazyková zkouška z angličtiny na úrovni&nbsp;C1</li>
+      </ul>
+
+      <h3>Gymnázium Písnická, 2006 – 2010</h3>
+      <ul>
+        <li>Maturita – všeobecné zaměření</li>
+      </ul>
+    </section>
+
+    <p class="add3">
+      Mé vzdělání i praxe ukazují, že dlouhodobé učení považuji za součást
+      odpovědnosti, disciplíny a strategického myšlení – hodnot, které vnáším do
+      každého profesního prostředí.
+    </p>
+
+    <!-- Doplňkové boxy -->
+    <section class="extra" id="skills">
+      <div class="extra-extra">
+        <h3>Silné stránky</h3>
+        <ul>
+          <li>Kombinace technických a soft-skills</li>
+          <li>Multitasking a organizace</li>
+          <li>Výborná komunikace</li>
+          <li>Adaptabilita a loajalita</li>
+        </ul>
+      </div>
+
+      <div class="extra-extra">
+        <h3>Jazyky</h3>
+        <ul>
+          <li>Angličtina – C1</li>
+          <li>Němčina – A1/A2</li>
+          <li>Brazilská portugalština – A1/A2</li>
+          <li>Ruština – A2/B1</li>
+        </ul>
+      </div>
+
+      <div class="extra-extra">
+        <h3>Nástroje a software</h3>
+        <ul>
+          <li>HTML, CSS, JavaScript, Python, Git/GitHub</li>
+          <li>MS Office, Google Workspace, Zoom, MS Teams</li>
+        </ul>
+      </div>
+
+      <div class="extra-extra">
+        <h3>Odbornost</h3>
+        <ul>
+          <li>Projektové řízení</li>
+          <li>Mezinárodní obchod</li>
+          <li>Inovace a růstové strategie</li>
+          <li>Life coaching</li>
+          <li>Zákaznická zkušenost</li>
+        </ul>
+      </div>
+    </section>
+
+        <!-- Kontakt -->
+    <section class="contact" id="contact">
+      <h2>Kontakt</h2>
+        <ul>
+          <li>E-mail: leosjirkovsky8(zavináč)gmail.com</li>
+          <li>Telefon: +420 776 072 172</li>
+        </ul>
+    </section>
+  </body>
 </html>
